@@ -592,7 +592,7 @@ footer{
   margin-top: 20px;
 }
 
-footer .inner{
+.footer_inner{
   display: block;
   height: 90px;
   margin: 0 auto;
@@ -600,7 +600,7 @@ footer .inner{
   text-align: center;
 }
 
-footer .inner ul{
+.footer_inner ul{
   max-width: 583px;
   width: 100%;
   margin: 0 auto;
@@ -610,21 +610,21 @@ footer .inner ul{
 }
 
 @media screen and (max-width:768px) {
-  footer .inner ul{
+  .footer_inner ul{
     max-width: inherit;
     justify-content: center;
     flex-wrap: wrap;
   }
 }
 
-footer .inner ul li{
+.footer_inner ul li{
   position: relative;
   font-size: 12px;
   line-height: 18px;
 }
 
 @media screen and (max-width:768px) {
-  footer .inner ul li{
+  .footer_inner ul li{
     padding: 0 11px;
   }
 }
@@ -639,13 +639,16 @@ footer .inner ul li{
 .bold{
   font-weight: bold;
 }
-
-.footer_inner ul li:nth-child(1) {
-  display: none;
-}
-
-.footer_inner ul li:nth-child(2) {
-  display: none;
+@media screen and (max-width:1024px) {
+  .footer_inner ul li:nth-child(1) {
+    display: none;
+  }
+  .footer_inner ul li:nth-child(2) {
+    display: none;
+  }
+  .footer_inner ul li:nth-child(3) {
+    display: none;
+  }
 }
 
 .footer_inner ul li span {
@@ -663,7 +666,7 @@ footer .inner ul li{
 }
 
 .footer_inner ul li:last-child span::after {
-  display: none; /* 가상 요소를 숨길 때는 display: none;을 사용합니다 */
+  display: none;
 }
 
 .footer_inner .copyright {
