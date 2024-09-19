@@ -1,0 +1,535 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'NanumBarunGothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url('//fastly.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+  src: url('//fastly.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//fastly.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//fastly.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+ }
+ 
+ @font-face {
+  font-family: 'NanumBarunGothic';
+  font-style: normal;
+  font-weight: 700;
+  src: url('//fastly.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot');
+  src: url('//fastly.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix') format('embedded-opentype'), url('//fastly.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff') format('woff'), url('//fastly.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf') format('truetype')
+ }
+ 
+ @font-face {
+  font-family: 'NanumBarunGothic';
+  font-style: normal;
+  font-weight: 300;
+  src: url('//fastly.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot');
+  src: url('//fastly.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'), url('//fastly.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff') format('woff'), url('//fastly.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf') format('truetype');
+ }
+ 
+body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, select, figure, label {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  line-height: 18px;
+  font-family: Nanum Barun Gothic, sans-serif;
+}
+
+body {
+	font: normal 18px 'Roboto', 'Noto Sans KR'; 
+	font-weight: 400;
+	line-height: 1;
+	color: #333;
+	background-color: #fff;
+	margin: 0;
+	padding: 0;
+  height: 100%;
+}
+* {box-sizing: border-box;}
+b, strong {font-weight: 700;}
+h1, h2, h3, h4, h5, h6 {font-size:1em;}
+h1, h2, h3, h4, h5, h6, div, p, dl, dt, dd, ul, ol, li, form, fieldset, blockquote, address, table, thead, tbody, tfoot, tr, td, caption {
+	margin: 0;
+	padding: 0;
+}
+table {width: 100%; border-collapse: collapse;}
+ul, ol {list-style:	none;}
+a {color: #333; text-decoration: none;}
+img {vertical-align: top;}
+em {font-style: normal;}
+i {font-style: normal;}
+address {font-style: normal;}
+button {outline: 0;}
+
+
+blockquote,
+body,
+dd,
+dl,
+dt,
+fieldset,
+figure,
+hr,
+html,
+iframe,
+legend,
+li,
+ol,
+p,
+pre,
+textarea,
+a,
+button,
+ul,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  margin: 0.83em 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+
+input,
+textarea {
+  color: #fff;
+  border-style: solid;
+  border-color: #525252;
+  border-width: 0.5px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  &::placeholder {
+      color: #4d4d4d;
+  }
+  &:hover,
+  &:focus {
+      outline: none;
+      border-color: #ababab;
+  }
+}
+textarea {
+  resize: none;
+}
+
+.underline {
+  text-decoration: underline;
+}
+.f1itmfnm{
+  position: relative;
+  height: 70px;
+}
+
+.h_inner{
+  position: fixed;
+  width: 100%;
+  height: 69px;
+  margin: 0 auto;
+  left: 0px;
+  top: 0px;
+  box-sizing: content-box;
+  border-bottom: 1px solid #d6d6d6;
+  background-color: #fff;
+  z-index: 30;
+}
+
+/* 해더 */
+.f1g9a9nk .h_w {
+  max-width: 1168px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.logo_area{
+  width: 236px;
+  float: left;
+  text-align: left;
+}
+
+.logo_inner{
+  display: inline-block;
+  width: 186px;
+  height: 21px;
+  position: relative;
+  vertical-align: middle;
+}
+
+.nav{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.menu{
+  position: relative;
+  display: block;
+  float: left;
+  height: 100%;
+}
+
+.menu ul{
+  display: flex;
+  align-items: center;
+  gap: 38px;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.right_area{
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.f1ope6py{
+  position: relative;
+  display: inline-block;
+  font-size: 12px;
+  height: 30px;
+  line-height: 30px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.fji9w6g {
+  display: inline-block;
+  margin-left: 10px;
+  position: relative;
+  vertical-align: middle;
+}
+
+.fji9w6g .btn_login {
+  background: #252525;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: normal;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  vertical-align: top;
+  width: 77px;
+}
+
+/* 컨탠츠1 - 아이콘 */
+._9kwSe9Eq-HNFnX84J40BL > ._1VoVsJajGRahTYjVDVVWdD {
+  max-width: 1168px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+/* 컨탠츠 */
+.banner_wrap {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner_wrap ul{
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  transition: transform 0.5s ease;
+}
+
+.banner_wrap ul li {
+  min-width: 100%;
+}
+
+.banner_wrap ul li img{
+  width: 100%;
+  display: block;
+}
+
+/* 네비게이션 이미지 버튼 스타일 */
+.navigation {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none; /* 클릭 불가한 요소들이 배경에 있는 것을 방지 */
+}
+
+.nav-prev, .nav-next {
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  pointer-events: all; /* 네비게이션 버튼 클릭 가능하도록 설정 */
+}
+
+.nav-prev {
+  background-image: url('../public/slider_btn.png'); /* 이전 버튼 이미지 */
+  transform: rotate(90deg); /* 이전 버튼 방향 설정 */
+  margin-left: 10px;
+}
+
+.nav-next {
+  background-image: url('../public/slider_btn.png'); /* 다음 버튼 이미지 */
+  transform: rotate(-90deg); /* 다음 버튼 방향 설정 */
+  margin-right: 10px;
+}
+
+/* 페이지네이션 버튼 스타일 */
+.pagination {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.page-btn {
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+.page-btn[data-slide="0"] {
+  background-image: url('https://via.placeholder.com/20x20?text=1');
+}
+
+.page-btn[data-slide="1"] {
+  background-image: url('https://via.placeholder.com/20x20?text=2');
+}
+
+.page-btn[data-slide="2"] {
+  background-image: url('https://via.placeholder.com/20x20?text=3');
+}
+.nav-btn[data-slide="0"] {
+  background-image: url('https://via.placeholder.com/20x20?text=1');
+}
+
+.nav-btn[data-slide="1"] {
+  background-image: url('https://via.placeholder.com/20x20?text=2');
+}
+
+.nav-btn[data-slide="2"] {
+  background-image: url('https://via.placeholder.com/20x20?text=3');
+}
+
+/* cont1 시작 */
+.cont1{
+  display: block;
+  height: 100%;
+  padding: 47px 0;
+}
+
+.cont_wrap {
+  max-width: 1168px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.cont_wrap ul{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cont_wrap li{
+  width: 16.66666667%;
+  height: 100%;
+  display: inline-block;
+  font-size: 16px;
+  vertical-align: middle;
+  transition: transform 0.2s ease-in-out;
+}
+
+.cont_wrap li:hover{
+  transition: transform 0.2s ease-in-out;
+  transform: scale(1.2);
+}
+
+.cont_wrap  ul li a{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  color: #666;
+}
+
+.list-naem{
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  color: #666;
+}
+
+/* cont2 시작 */
+.blind{
+  position: absolute;
+  text-indent: -9999px;
+  z-index: 0;
+}
+
+.cont2{
+  min-height: 370px;
+  background: linear-gradient(135deg, #f0f0f0 0%, #cccccc 100%);
+}
+
+.cont2  ul li {
+  display: inline-block;
+  vertical-align: middle;
+  background: #fff;
+  width: 260px;
+  transition: all 0.3s ease-in-out;
+}
+
+.cont2 .cont_wrap {
+  height: 100%;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.cont2 .cont_wrap ul {
+  gap: 25px;
+}
+
+.cont2 ul li .back1img:hover{
+  transition: all 0.3s ease-in-out;
+  filter: blur(#288b3d,rgba(15, 238, 63, 0.281));
+}
+
+.cont2 ul li .back1img{
+  background: url(../public/item2.png) no-repeat;
+  max-width: 260px;
+  height: 148px;
+  width: 100%;
+  background-size: contain;
+  background-position: center;
+}
+
+.cont2 ul li:nth-child(3) .back1img{
+  background: url(../public/item1.png) no-repeat;
+  max-width: 260px;
+  height: 148px;
+  width: 100%;
+  background-size: contain;
+  background-position: center;
+}
+
+.cont2 .area{
+  display: block;
+  padding: 0 15px 15px;
+} 
+.cont2 ul li .title{
+  width: 90%;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 보여줄 줄 수 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis; /* 생략 기호(...) */
+  font-size: 15px;
+  text-align: left;
+  color: #000;
+}
+
+.smail_title{
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+  line-height: 18px;
+  color: #9e9e9e;
+}
+
+.view{
+  display: block;
+  margin: 10px auto;
+  padding: 10px 0 8px;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.view a{
+  display: block;
+  text-align: center;
+  font-size: 15px;
+}
+
+@media screen and (min-width: 1169px) {
+  .view{
+      width: 1100px;
+  }
+}
+
+/* footer 시작 */
+footer{
+  margin-top: 20px;
+}
+
+footer .inner{
+  display: block;
+  height: 90px;
+  margin: 0 auto;
+  max-width: 1168px;
+  text-align: center;
+}
+
+footer .inner ul{
+  max-width: 612px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer .inner ul li{
+  position: relative;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+footer .inner ul li a{
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #444;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+footer .inner ul li span{
+  position: relative;
+}
+
+footer .inner ul li span::after{
+  content: "";
+  clear: both;
+  position: absolute;
+  right: -5px;
+  height: 17px;
+  width: 1px;
+  background-color: #c0c0c0;
+}
+
+footer .inner ul li:last-child span::after{
+  content: none;
+}
+
+footer .copyright{
+  margin-top: 10px;
+  font-size: 12px;
+}
