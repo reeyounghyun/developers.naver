@@ -248,6 +248,15 @@ textarea {
   display: block;
 }
 
+#banner{
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+#banner li {
+  min-width: 100%; /* 각 슬라이드가 화면을 가득 채우도록 설정 */
+}
+
 /* 네비게이션 이미지 버튼 스타일 */
 .navigation {
   position: absolute;
@@ -256,29 +265,33 @@ textarea {
   display: flex;
   justify-content: space-between;
   transform: translateY(-50%);
-  pointer-events: none; /* 클릭 불가한 요소들이 배경에 있는 것을 방지 */
+  pointer-events: none; 
 }
 
 .nav-prev, .nav-next {
-  width: 40px;
+  width: 86px;
   height: 40px;
   background-size: cover;
   background-repeat: no-repeat;
   border: none;
   cursor: pointer;
-  pointer-events: all; /* 네비게이션 버튼 클릭 가능하도록 설정 */
+  pointer-events: all; 
 }
 
 .nav-prev {
-  background-image: url('../public/slider_btn.png'); /* 이전 버튼 이미지 */
-  transform: rotate(90deg); /* 이전 버튼 방향 설정 */
+  background-image: url('../public/slider_btn.png'); 
+  transform: rotate(-90deg);
   margin-left: 10px;
+  background-color: transparent;
+  background-size: cover;
 }
 
 .nav-next {
-  background-image: url('../public/slider_btn.png'); /* 다음 버튼 이미지 */
-  transform: rotate(-90deg); /* 다음 버튼 방향 설정 */
-  margin-right: 10px;
+  background-image: url('../public/slider_btn.png'); 
+  transform: rotate(90deg);
+  margin-left: 10px;
+  background-color: transparent;
+  background-size: cover;
 }
 
 /* 페이지네이션 버튼 스타일 */
@@ -292,35 +305,20 @@ textarea {
 }
 
 .page-btn {
-  width: 20px;
-  height: 20px;
-  background-size: cover;
-  background-repeat: no-repeat;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%; 
   border: none;
   cursor: pointer;
+  transition: background-color 0.3s ease; /* 부드러운 색상 전환 효과 */
 }
 
-.page-btn[data-slide="0"] {
-  background-image: url('https://via.placeholder.com/20x20?text=1');
+.page-btn.active {
+  background-color: white; /* 활성화된 상태에서는 하얀색 */
 }
 
-.page-btn[data-slide="1"] {
-  background-image: url('https://via.placeholder.com/20x20?text=2');
-}
-
-.page-btn[data-slide="2"] {
-  background-image: url('https://via.placeholder.com/20x20?text=3');
-}
-.nav-btn[data-slide="0"] {
-  background-image: url('https://via.placeholder.com/20x20?text=1');
-}
-
-.nav-btn[data-slide="1"] {
-  background-image: url('https://via.placeholder.com/20x20?text=2');
-}
-
-.nav-btn[data-slide="2"] {
-  background-image: url('https://via.placeholder.com/20x20?text=3');
+.page-btn {
+  background-color: rgba(169, 169, 169, 0.7); 
 }
 
 /* cont1 시작 */
@@ -351,12 +349,12 @@ textarea {
   transition: transform 0.2s ease-in-out;
 }
 
-.cont_wrap li:hover{
+.cont1 .cont_wrap ul li:hover{
   transition: transform 0.2s ease-in-out;
   transform: scale(1.2);
 }
 
-.cont_wrap  ul li a{
+.cont_wrap ul li a{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -383,12 +381,11 @@ textarea {
   background: linear-gradient(135deg, #f0f0f0 0%, #cccccc 100%);
 }
 
-.cont2  ul li {
+.cont2 ul li {
   display: inline-block;
   vertical-align: middle;
   background: #fff;
   width: 260px;
-  transition: all 0.3s ease-in-out;
 }
 
 .cont2 .cont_wrap {
@@ -405,18 +402,29 @@ textarea {
   gap: 25px;
 }
 
-.cont2 ul li .back1img:hover{
-  transition: all 0.3s ease-in-out;
-  filter: blur(#288b3d,rgba(15, 238, 63, 0.281));
+
+.cont2 .cont_wrap ul  li {
+  background-color: white; /* 흰색 배경 */
+  border-radius: 10px; /* 모서리를 부드럽게 둥글게 설정 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), /* 가벼운 그림자 */
+              0 2px 4px rgba(0, 0, 0, 0.06); /* 추가적인 그림자 */
+  transition: box-shadow 0.3s ease; /* 호버 시 부드럽게 그림자 변화 */
 }
+
+/* 호버 시 그림자를 더 강하게 */
+.cont2 .cont_wrap ul li:hover {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* 더 짙은 그림자 */
+}
+
 
 .cont2 ul li .back1img{
   background: url(../public/item2.png) no-repeat;
   max-width: 260px;
   height: 148px;
   width: 100%;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
+  transition: filter 0.3s ease; /* 필터가 부드럽게 전환되도록 설정 */
 }
 
 .cont2 ul li:nth-child(3) .back1img{
@@ -426,12 +434,14 @@ textarea {
   width: 100%;
   background-size: contain;
   background-position: center;
+  transition: filter 0.3s ease; /* 필터가 부드럽게 전환되도록 설정 */
 }
 
 .cont2 .area{
   display: block;
   padding: 0 15px 15px;
 } 
+
 .cont2 ul li .title{
   width: 90%;
   display: -webkit-box;
@@ -457,7 +467,7 @@ textarea {
   margin: 10px auto;
   padding: 10px 0 8px;
   background-color: #fff;
-  transition: all 0.3s ease-in-out;
+  /* transition: all 0.3s ease-in-out; */
 }
 
 .view a{
