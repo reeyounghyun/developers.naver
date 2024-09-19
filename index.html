@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>네이버 개발자 센터 - NAVER Developers</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,300,0,0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20,0,0,0" />
   <link rel="stylesheet" href="./src/style.css">
 </head>
 <body>
@@ -83,18 +85,22 @@
           </div>
           <div class="right_area">
             <div class="f1ope6py success">
-              <i class="api_status"></i>
+              <span class="material-symbols-outlined">
+                check_circle
+              </span>
               <span>API 상태</span>
             </div>
-            <form action="/search" method="GET" name="srchfm">
+            <form action="/search" method="GET" name="srchfm" id="from">
               <input type="text" hidden="" name="tags" value="ndc" readonly="">
               <div class="srch">
                 <span class="srch_inp">
                   <input type="text" name="keyword" placeholder="Search Here">
                 </span>
-                <a class="btn_srch cursor">
-                  <i class="xi-magnifier xi-search xi-2x pull-right"></i>
-                </a>
+                <button type="button" class="btn_srch cursor">
+                  <span class="material-symbols-outlined">
+                    search
+                    </span>
+                </button>
               </div>
             </form>
             <div class="fji9w6g logged-checked">
@@ -264,7 +270,7 @@
             <span>VIEW ALL</span>
           </a>
         </div>
-        </div>
+      </div>
     </div>
   </section>
   <footer>

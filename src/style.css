@@ -145,7 +145,7 @@ textarea {
 }
 
 .logo_area{
-  width: 236px;
+  width: 233px;
   float: left;
   text-align: left;
 }
@@ -156,6 +156,7 @@ textarea {
   height: 21px;
   position: relative;
   vertical-align: middle;
+  cursor: pointer;
 }
 
 .nav{
@@ -171,12 +172,26 @@ textarea {
   height: 100%;
 }
 
+@media screen and (max-width:1024px) {
+  .menu{
+    display: none;
+  }
+}
+
 .menu ul{
   display: flex;
   align-items: center;
   gap: 38px;
   height: 100%;
   vertical-align: middle;
+}
+.menu ul li span{
+  color: #000;
+  transition: all 0.3s;
+}
+
+.menu ul li span:hover{
+  color: #4AB56A;
 }
 
 .right_area{
@@ -189,12 +204,19 @@ textarea {
 
 .f1ope6py{
   position: relative;
-  display: inline-block;
   font-size: 12px;
-  height: 30px;
-  line-height: 30px;
-  margin-right: 10px;
   text-align: center;
+  color: #4AB56A;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+@media screen and (max-width:1024px) {
+  .f1ope6py{
+    display: none;
+  }
 }
 
 .fji9w6g {
@@ -202,6 +224,12 @@ textarea {
   margin-left: 10px;
   position: relative;
   vertical-align: middle;
+}
+
+@media screen and (max-width:1024px) {
+  .fji9w6g{
+    display: none;
+  }
 }
 
 .fji9w6g .btn_login {
@@ -215,6 +243,37 @@ textarea {
   text-align: center;
   vertical-align: top;
   width: 77px;
+}
+
+.from{
+  position: relative;
+  width: 100%;
+}
+
+.srch{
+  position: relative;
+}
+
+.srch button{
+  background: transparent;
+  border: none;
+  display: inline-block;
+  position: absolute;
+  right: 7px;
+  top: 5px;
+}
+
+.srch input{
+  position: relative;
+  padding: 6px 11px;
+  font-size: 15px;
+  border: 1px solid #cbcbcb;
+  color: #000;
+}
+
+.srch span.material-symbols-outlined{
+  cursor: pointer;
+  opacity: 0.7
 }
 
 /* 컨탠츠1 - 아이콘 */
@@ -254,7 +313,8 @@ textarea {
 }
 
 #banner li {
-  min-width: 100%; /* 각 슬라이드가 화면을 가득 채우도록 설정 */
+  min-width: 100%; 
+  cursor: pointer;
 }
 
 /* 네비게이션 이미지 버튼 스타일 */
@@ -338,6 +398,7 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .cont_wrap li{
@@ -349,9 +410,22 @@ textarea {
   transition: transform 0.2s ease-in-out;
 }
 
+@media screen and (max-width:768px) {
+  .cont1 .cont_wrap li{
+    max-width: 70px;
+    width: 100%;
+  }
+}
+
 .cont1 .cont_wrap ul li:hover{
   transition: transform 0.2s ease-in-out;
   transform: scale(1.2);
+}
+@media screen and (max-width:768px) {
+  .cont1 .cont_wrap ul li img{
+    max-width: 50px;
+    width: 1005;
+  }
 }
 
 .cont_wrap ul li a{
@@ -368,6 +442,19 @@ textarea {
   text-align: center;
   color: #666;
 }
+
+@media screen and (max-width:1024px) {
+  .list-naem{
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .list-naem{
+    display: none;
+  }
+}
+
 
 /* cont2 시작 */
 .blind{
@@ -389,6 +476,7 @@ textarea {
 }
 
 .cont2 .cont_wrap {
+  max-width: 1168px;
   height: 100%;
   padding: 30px 0;
   display: flex;
@@ -464,6 +552,7 @@ textarea {
 
 .view{
   display: block;
+  width: 85%;
   margin: 10px auto;
   padding: 10px 0 8px;
   background-color: #fff;
@@ -496,7 +585,7 @@ footer .inner{
 }
 
 footer .inner ul{
-  max-width: 612px;
+  max-width: 583px;
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -504,10 +593,24 @@ footer .inner ul{
   justify-content: space-between;
 }
 
+@media screen and (max-width:768px) {
+  footer .inner ul{
+    max-width: inherit;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
 footer .inner ul li{
   position: relative;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 18px;
+}
+
+@media screen and (max-width:768px) {
+  footer .inner ul li{
+    padding: 0 11px;
+  }
 }
 
 footer .inner ul li a{
@@ -515,6 +618,12 @@ footer .inner ul li a{
   width: 100%;
   height: 100%;
   color: #444;
+}
+
+footer .inner ul li:nth-child(1),
+footer .inner ul li:nth-child(2),
+footer .inner ul li:nth-child(3){
+  display: none;
 }
 
 .bold{
@@ -529,7 +638,7 @@ footer .inner ul li span::after{
   content: "";
   clear: both;
   position: absolute;
-  right: -5px;
+  right: -8px;
   height: 17px;
   width: 1px;
   background-color: #c0c0c0;
