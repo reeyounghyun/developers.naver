@@ -23,5 +23,5 @@ Swiper.js를 이용하지 않고 슬라이드 구현
 
 [디렉토리] <br/>
 -public: 이미지  <br/>
--src: 주요 파일
+-src: 주요 파일 <br/>
 -index.html
