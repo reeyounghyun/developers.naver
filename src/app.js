@@ -61,7 +61,8 @@ pageBtns.forEach((btn, idx) => {
 // 초기 페이지네이션 버튼 상태 업데이트
 updatePagination();
 
-//changeBackgroundImage
+/**
+ * //changeBackgroundImage
 function applyGreenFilter() {
   const listItems = document.querySelectorAll('li');
   
@@ -81,3 +82,5 @@ function applyGreenFilter() {
 }
 
 applyGreenFilter();
+**/
+

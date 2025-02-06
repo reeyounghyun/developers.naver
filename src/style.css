@@ -159,8 +159,6 @@ textarea {
 
 .logo_inner{
   display: inline-block;
-  width: 186px;
-  height: 21px;
   position: relative;
   vertical-align: middle;
   cursor: pointer;
@@ -204,7 +202,7 @@ textarea {
   transition: all 0.3s;
 }
 
-.menu ul li span:hover{
+.menu ul li:nth-child(1) span{
   color: #4AB56A;
 }
 
@@ -333,10 +331,16 @@ textarea {
 }
 
 #banner li {
-  min-width: 100%; 
-  cursor: pointer;
   overflow: hidden;
-  min-height: 322px;
+  height: 534px;
+  width: 100%;
+  cursor: pointer;
+}
+
+#banner li img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* 네비게이션 이미지 버튼 스타일 */
@@ -384,6 +388,7 @@ textarea {
   transform: translateX(-50%);
   display: flex;
   gap: 10px;
+  padding:5px 0;
 }
 
 .page-btn {
@@ -400,7 +405,7 @@ textarea {
 }
 
 .page-btn {
-  background-color: rgba(169, 169, 169, 0.7); 
+  background-color: rgba(255, 255, 255, 0.7); 
 }
 
 /* cont1 시작 */
@@ -418,7 +423,7 @@ textarea {
 
 .cont_wrap ul{
   display: flex;
-  align-items: center;
+  align-items: top;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -430,6 +435,7 @@ textarea {
   font-size: 16px;
   vertical-align: middle;
   transition: transform 0.2s ease-in-out;
+  overflow: hidden;
 }
 
 @media screen and (max-width:768px) {
@@ -439,9 +445,11 @@ textarea {
   }
 }
 
-.cont1 .cont_wrap ul li:hover{
-  transition: transform 0.2s ease-in-out;
-  transform: scale(1.2);
+.cont1 .cont_wrap ul li img{
+  display: block;
+  width: 100%;
+  max-width: 80px;
+  overflow: hidden;
 }
 
 @media screen and (max-width:768px) {
@@ -456,7 +464,7 @@ textarea {
   flex-direction: column;
   align-items: center;
   gap: 18px;
-  color: #666;
+  color: #333;
 }
 
 .list-naem{
@@ -464,6 +472,11 @@ textarea {
   vertical-align: middle;
   text-align: center;
   color: #666;
+  font-size: 14px;
+}
+
+.cont1 .cont_wrap ul li:hover .list-naem{
+  font-size: 14px;
 }
 
 @media screen and (max-width:1024px) {
@@ -514,7 +527,7 @@ textarea {
 
 .cont2 .cont_wrap ul  li {
   background-color: white;
-  border-radius: 10px; 
+  border-radius: 5px; 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
               0 2px 4px rgba(0, 0, 0, 0.06); 
   transition: box-shadow 0.3s ease; 
@@ -531,7 +544,17 @@ textarea {
   width: 100%;
   background-size: cover;
   background-position: center;
-  transition: filter 0.3s ease; 
+}
+.cont2 ul li:nth-child(1):hover .back1img{
+  background: url(../public/item2_color.png)no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.cont2 ul li:nth-child(2):hover .back1img{
+  background: url(../public/item2_color.png)no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 .cont2 ul li:nth-child(3) .back1img{
@@ -541,7 +564,19 @@ textarea {
   width: 100%;
   background-size: contain;
   background-position: center;
-  transition: filter 0.3s ease; 
+  transition: all 0.3s ease; 
+}
+
+.cont2 ul li:nth-child(3):hover .back1img{
+  background: url(../public/item1_color.png)no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.cont2 ul li:nth-child(4):hover .back1img{
+  background: url(../public/item2_color.png)no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 .cont2 .area{
@@ -587,6 +622,10 @@ textarea {
   .view{
       width: 1100px;
   }
+}
+
+.view a span{
+  font-weight: 500;
 }
 
 /* footer 시작 */
