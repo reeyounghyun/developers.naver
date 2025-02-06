@@ -335,6 +335,8 @@ textarea {
 #banner li {
   min-width: 100%; 
   cursor: pointer;
+  overflow: hidden;
+  min-height: 322px;
 }
 
 /* 네비게이션 이미지 버튼 스타일 */
