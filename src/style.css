@@ -117,6 +117,7 @@ textarea {
 .underline {
   text-decoration: underline;
 }
+
 .f1itmfnm{
   position: relative;
   height: 70px;
@@ -144,23 +145,10 @@ textarea {
   position: relative;
 }
 
-.logo_area{
-  width: 233px;
-  float: left;
-  text-align: left;
-}
-
-@media screen and (max-width:1200px) {
-  .logo_area {
-    width: 212px;
-    margin-left: 10px;
-  }
-}
-
 .logo_inner{
   display: inline-block;
   position: relative;
-  vertical-align: middle;
+  padding-right: 30px;
   cursor: pointer;
 }
 
